@@ -6,12 +6,11 @@ public class maximumsubArray {
         int arr[] = { 1, 3, -4, 2, -9, 4, 2, 0, -2 };
         int length = arr.length;
         int sum = 0;
-        int maxsum = 0;
+        int maxsum = Integer.MIN_VALUE;
         for(int i=0;i<length;i++)
         {
             sum = sum + arr[i];
-            if (sum > maxsum)
-                maxsum = sum;
+            maxsum=Math.max(maxsum,sum);
 
             if (sum < 0) {
                 sum = 0;
